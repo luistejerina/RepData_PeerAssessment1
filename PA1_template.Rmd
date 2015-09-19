@@ -23,6 +23,8 @@ Calculating the number of steps taken per day
 attach(activity)
 #tapply(steps, date, sum)
 stepsperday=ddply(activity,.(activity$date),summarise,totalsteps = sum(steps,na.rm=TRUE))
+tapply(steps, date, sum)
+
 summary(stepsperday$totalsteps)
 ```
 the mean steps are 9354
